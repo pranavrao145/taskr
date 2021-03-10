@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Taskr</string>
+    <string name="your_tasks">Your Tasks</string>
+    <string name="delete_all">Delete All</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="create_new_task">Create New Task</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="important">Important</string>
+    <string name="submit">Submit</string>
+</resources>
