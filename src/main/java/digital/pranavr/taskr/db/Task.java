@@ -35,7 +35,7 @@ public class Task {
 
     @Override
     public String toString() {
-        String isImportantInYesNo = this.isImportant ? "yes" : "no";
+        String isImportantInYesNo = this.isImportant ? "Yes" : "No";
         return "Task: " + this.name + "\nDescription: " + this.description + "\nImportant: " + isImportantInYesNo;
     }
 
