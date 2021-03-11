@@ -12,7 +12,7 @@ public abstract class TaskDatabase extends RoomDatabase {
 
     public static synchronized TaskDatabase getInstance(Context context) {
         if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(), TaskDatabase.class, DB_NAME).fallbackToDestructiveMigration().build();
+            instance = Room.databaseBuilder(context.getApplicationContext(), TaskDatabase.class, DB_NAME).fallbackToDestructiveMigration().allowMainThreadQueries().build();
         }
         return instance;
     }

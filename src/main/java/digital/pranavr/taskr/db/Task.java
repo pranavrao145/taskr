@@ -33,6 +33,12 @@ public class Task {
         this.isImportant = isImportant;
     }
 
+    @Override
+    public String toString() {
+        String isImportantInYesNo = this.isImportant ? "yes" : "no";
+        return "Task: " + this.name + "\nDescription: " + this.description + "\nImportant: " + isImportantInYesNo;
+    }
+
     public int getId() {
         return id;
     }

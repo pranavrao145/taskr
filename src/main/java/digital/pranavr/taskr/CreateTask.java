@@ -14,6 +14,7 @@ public class CreateTask extends AppCompatActivity {
     EditText et_taskName, emlt_description;
     CheckBox cb_isImportant;
     Button btn_submit;
+    TaskDatabase taskDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,8 @@ public class CreateTask extends AppCompatActivity {
         emlt_description = findViewById(R.id.emlt_description);
         cb_isImportant = findViewById(R.id.cb_isImportant);
         btn_submit = findViewById(R.id.btn_submit);
+
+        taskDatabase = TaskDatabase.getInstance(CreateTask.this);
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,9 +43,8 @@ public class CreateTask extends AppCompatActivity {
                     Toast.makeText(CreateTask.this, "Error", Toast.LENGTH_SHORT).show();
                 }
 
-                TaskDatabase taskDatabase = TaskDatabase.getInstance(CreateTask.this);
-
                 if (success) taskDatabase.taskDao().insertTask(task);
+
 
                 finish();
             }

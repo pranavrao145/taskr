@@ -6,8 +6,11 @@ import java.util.List;
 
 @Dao
 public interface TaskDao {
-    @Query("select * from Task")
+    @Query("select * from task")
     List<Task> getTaskList();
+
+    @Query("delete from task")
+    void deleteAllTasks();
 
     @Insert
     void insertTask(Task task);
@@ -17,4 +20,5 @@ public interface TaskDao {
 
     @Delete
     void deleteTask(Task task);
+
 }
