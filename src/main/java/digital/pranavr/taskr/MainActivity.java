@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         List<Task> relevantTasks = new ArrayList<>();
 
         for (Task task : allTasks) {
-            if (task.getName().toLowerCase().contains(query) || task.getDescription().toLowerCase().contains(query)) {
+            if (task.getName().toLowerCase().contains(query.toLowerCase()) || task.getDescription().toLowerCase().contains(query.toLowerCase())) {
                 relevantTasks.add(task);
             }
         }
